@@ -20,5 +20,22 @@ function Circle(radius) {
         console.log('draw')
     }
 }
-const circle = new Circle(1);
-console.log(circle);
+const circle = new Circle(4);
+// console.log(circle);
+circle.call=({}, 1);
+circle.apply = ({}, 1);
+
+//Primitives copied by value
+let x = 10;
+let y = x;
+x = 20;
+console.log(x);
+console.log(y);
+
+//Objects copied by reference
+let z = {value : 10};
+let a = z;
+z.value = 25;
+console.log(z);
+console.log(a);
+
